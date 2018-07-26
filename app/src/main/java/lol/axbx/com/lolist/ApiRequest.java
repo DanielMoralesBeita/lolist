@@ -134,7 +134,7 @@ try {
 
                 for (int j = 0; j < numero_participantes; j++) {
                     JSONObject Participante = participantes.getJSONObject(j);
-                    Nombre_participante = Nombre_participante + ", " + Participante.getString("summonerName");
+                    Nombre_participante = Nombre_participante + Participante.getString("summonerName")+"-";
 
                 }
 
@@ -199,9 +199,13 @@ try {
 
                                 String name=xx.getString("name");
                                 String title=xx.getString("title");
+                                JSONObject image=xx.getJSONObject("image");
+                                String full="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/"+image.getString("full");
 
                                  System.out.println("name:"+name);
                                  System.out.println("title:"+title);
+                                System.out.println("image:"+full);
+
 
                                 MainActivity.listItems.add(name+ " | " + title);
 
@@ -211,15 +215,6 @@ try {
 
                             }
 
-
-
-
-                           // JSONObject onMatch=players.getJSONObject("data");
-                           // String name=onMatch.getString("name");
-                           // String id=onMatch.getString("id");
-
-                           // System.out.println("name:"+name);
-                           // System.out.println("id:"+id);
 
 
                         }

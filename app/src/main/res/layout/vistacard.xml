@@ -18,10 +18,11 @@
 
         <TextView
             android:id="@+id/TipoJuego"
-            android:textColor="@color/colorPrimary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="JUEGOS" />
+            android:text="JUEGOS"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/NumeroParticipantes"
